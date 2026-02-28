@@ -12,27 +12,6 @@ Swift Wright gives you a [Playwright](https://playwright.dev)-style automation m
 
 ---
 
-## Table of Contents
-
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Permissions](#permissions)
-- [Quick Start](#quick-start)
-- [Selector Reference](#selector-reference)
-- [API Reference](#api-reference)
-  - [Page](#page)
-  - [Locator](#locator)
-  - [Expect](#expect)
-  - [Permissions](#permissions-api)
-- [CLI Reference](#cli-reference)
-- [Auto-Waiting](#auto-waiting)
-- [Error Handling](#error-handling)
-- [Architecture](#architecture)
-- [Testing](#testing)
-- [Roadmap](#roadmap)
-
----
-
 ## Requirements
 
 | Requirement | Version |
@@ -540,19 +519,6 @@ Run the unit test suite:
 swift test
 ```
 
----
-
-## Releasing
-
-To cut a release:
-
-```sh
-git tag v1.0.0
-git push origin v1.0.0
-```
-
-This triggers the [release workflow](.github/workflows/release.yml) which builds and attaches universal binaries to the GitHub release.
-
 The test suite covers:
 
 - **`SelectorParserTests`** (20 tests) — Valid and invalid selector strings, all grammar constructs, error cases
@@ -571,3 +537,16 @@ func testLoginFlow() async throws {
     try await expect(page.locator("statictext[title~=Welcome]")).toExist()
 }
 ```
+
+---
+
+## Releasing
+
+To cut a release:
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+This triggers the [release workflow](.github/workflows/release.yml) which builds and attaches universal binaries to the GitHub release.
