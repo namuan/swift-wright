@@ -1,5 +1,11 @@
 # Swift Wright
 
+[![CI](https://github.com/namuan/swift-wright/actions/workflows/ci.yml/badge.svg)](https://github.com/namuan/swift-wright/actions/workflows/ci.yml)
+[![Release](https://github.com/namuan/swift-wright/actions/workflows/release.yml/badge.svg)](https://github.com/namuan/swift-wright/actions/workflows/release.yml)
+[![Swift](https://img.shields.io/badge/Swift-5.9+-F05138?logo=swift&logoColor=white)](https://swift.org)
+[![Platform](https://img.shields.io/badge/platform-macOS%2013%2B-lightgrey?logo=apple)](https://developer.apple.com/macos/)
+[![License](https://img.shields.io/github/license/namuan/swift-wright)](https://github.com/namuan/swift-wright/blob/main/LICENSE)
+
 End-to-end macOS UI automation in pure Swift, built on the Accessibility (AX) APIs.
 
 Swift Wright gives you a [Playwright](https://playwright.dev)-style automation model — deterministic selectors, auto-waiting, and a composable assertion API — for any accessibility-enabled macOS application, without requiring access to the app's source code or test target.
@@ -45,7 +51,7 @@ Add Swift Wright to your `Package.swift`:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/your-org/swift-wright", from: "1.0.0"),
+    .package(url: "https://github.com/namuan/swift-wright", from: "1.0.0"),
 ],
 targets: [
     .target(
@@ -55,7 +61,13 @@ targets: [
 ]
 ```
 
-Or add it in Xcode via **File → Add Package Dependencies**.
+Or add it in Xcode via **File → Add Package Dependencies** and enter:
+
+```
+https://github.com/namuan/swift-wright
+```
+
+Pre-built universal binaries (arm64 + x86_64) are attached to every [GitHub release](https://github.com/namuan/swift-wright/releases).
 
 ---
 
