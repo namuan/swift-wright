@@ -540,6 +540,19 @@ Run the unit test suite:
 swift test
 ```
 
+---
+
+## Releasing
+
+To cut a release:
+
+```sh
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+This triggers the [release workflow](.github/workflows/release.yml) which builds and attaches universal binaries to the GitHub release.
+
 The test suite covers:
 
 - **`SelectorParserTests`** (20 tests) — Valid and invalid selector strings, all grammar constructs, error cases
